@@ -1,0 +1,32 @@
+<mat-card class="p-5" >
+    <mat-card-header class="justify-center">
+      <mat-card-title>Currency Converter</mat-card-title>
+    
+    </mat-card-header>
+    <div>
+     
+      <form [formGroup]="form">
+        <mat-form-field class="m-3" floatLabel="always">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" formControlName="amountCurrenciesControl"  placeholder="0">
+        </mat-form-field>
+        <currency-picker label="from" class="m-3" formControlName="fromCurrenciesControl"/>
+      <currency-picker label="to" class="m-3" formControlName="toCurrenciesControl"/>
+      
+      </form>
+     
+  <div>
+    <span class="text-5xl">{{ calcResult$ | async }}</span>
+  </div>
+      
+    </div>
+    
+  </mat-card>
+  
+  
+  
+  
+  
+  <!-- <div class="relative bg-white px-6 pt-10 pb-8  shadow-md ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+      sas
+    </div> -->
